@@ -5,6 +5,7 @@
     justify-content: center;
     min-height: 57rem;
     z-index: 1;
+    width: 100%;
 }
 
 .container{
@@ -106,7 +107,7 @@ button:hover {
 
     .container{
         width: 28rem;
-        height: 45rem;
+        height: 46rem;
     }
 
     .form-signup button {
