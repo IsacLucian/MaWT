@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MaWT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Navbar.css">
+    <link rel="stylesheet" href="../css/Card.css">
+    <link rel="stylesheet" href="../css/Footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">MaWT</label>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="#">List</a></li>
+            <li><a href="#">Map</a></li>
+            <li class="login"><a class="active" href="#" >Join</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrap">
+        <div class="card">
+            <div class="container">
+                <br>
+                <h3>Login</h3>
+                <br>
+                <label><b>Email:</b></label>
+                <input type="text" name="email">
+
+                <label><b>Password:</b></label>
+                <input type="password" name="password">
+
+                <button type="submit"> Login </button>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <br>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="container">
+                <br>
+                <h3>Register</h3>
+                <br>
+
+                <label><b>Email:</b></label>
+                <input type="text" name="email">
+
+                <label><b>First name:</b></label>
+                <input type="text" name="first-name">
+
+                <label><b>Last name:</b></label>
+                <input type="text" name="last-name">
+
+                <label><b>Password:</b></label>
+                <input type="password" name="password">
+
+                <label><b>Confirm password:</b></label>
+                <input type="password" name="password">
+
+                <button type="submit"> Register </button>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>
+            Managing water turbines on web <br>
+            <a href="Documentatie.html"> Architecture </a>
+        </p>
+    </div>
+</body>
+</html>
