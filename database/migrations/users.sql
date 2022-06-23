@@ -5,4 +5,4 @@ CREATE TABLE users(
 		admin boolean NULL,
 		created_at timestamp DEFAULT CURRENT_TIMESTAMP,
 		updated_at timestamp DEFAULT CURRENT_TIMESTAMP
-);
+);+-

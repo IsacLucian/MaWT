@@ -20,26 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1b886df-6f66-4f2e-9e08-8a0906dfef1e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/users.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/Config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/Api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/Web.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/Router.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/Footer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/Home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/Join.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/List.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/Navbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Documentatie.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Join.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/List.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Capture.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/ChangePage.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/List.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Login.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Register.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/SearchHome.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Upgrading+Pumped+Storage+Hydropower_+O&amp;M+Modernization+and+Optimization.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/thumbnail.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/users.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Join.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Join.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +88,7 @@
       <workItem from="1654256052052" duration="2126000" />
       <workItem from="1655995848907" duration="43000" />
       <workItem from="1655996385467" duration="1082000" />
-      <workItem from="1656000026634" duration="1529000" />
+      <workItem from="1656000026634" duration="6182000" />
     </task>
     <servers />
   </component>
@@ -132,14 +123,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1655995890492" />
+    <state x="507" y="87" key="NewPhpClassDialog" timestamp="1656001732356">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="507" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1656001732356" />
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1656004663265">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1656004663265" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1650185793749">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1650185793749" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1654256085442">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1656006097917">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1654256085442" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1656006097917" />
     <state x="339" y="17" width="672" height="676" key="search.everywhere.popup" timestamp="1650215308821">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

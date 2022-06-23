@@ -17,10 +17,10 @@
         </label>
         <label class="logo">MaWT</label>
         <ul>
-            <li><a class="active" href="#">Home</a></li>
+            <li><a class="active" href="">Home</a></li>
             <li><a href="List.php">List</a></li>
             <li><a href="#">Map</a></li>
-            <li class="login"><a href="Join.php    " >Join</a></li>
+            <li class="login"><a href="<?php echo URL . '/register' ?>">Join</a></li>
         </ul>
     </nav>
 

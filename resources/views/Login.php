@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <title>MaWT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/Navbar.css">
-    <link rel="stylesheet" href="../css/Join.css">
-    <link rel="stylesheet" href="../css/Footer.css">
+    <link rel="stylesheet" href="resources/css/Navbar.css">
+    <link rel="stylesheet" href="resources/css/Join.css">
+    <link rel="stylesheet" href="resources/css/Footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
@@ -18,10 +18,10 @@
     </label>
     <label class="logo">MaWT</label>
     <ul>
-        <li><a href="Home.php">Home</a></li>
+        <li><a href="<?php echo URL ?>">Home</a></li>
         <li><a href="List.php">List</a></li>
         <li><a href="#">Map</a></li>
-        <li class="login"><a class="active" href="#" >Join</a></li>
+        <li class="login"><a class="active" href="" >Join</a></li>
     </ul>
 </nav>
 
@@ -48,7 +48,7 @@
 
             <div class="signin">
                 <h4>Don't have an account? Click here:</h4>
-                <a href="Join.php" target="_self" id="login">Register</a>
+                <a href="<?php echo URL . '/register' ?>" target="_self" id="login">Register</a>
             </div>
 
         </form>
