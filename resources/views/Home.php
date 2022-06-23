@@ -4,7 +4,6 @@
     <title>MaWT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/Navbar.css" type="text/css"/>
-<!--    <link rel="stylesheet" href="../css/Join.css">-->
     <link rel="stylesheet" href="resources/css/Footer.css" type="text/css"/>
     <link rel="stylesheet" href="resources/css/Home.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" type="text/css"/>

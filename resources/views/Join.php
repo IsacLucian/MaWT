@@ -32,7 +32,7 @@
             <h3>Register</h3>
         </div>
 
-        <form class="form-signup">
+        <form class="form-signup" action="/users/post" method="post">
 
             <div class="form-input">
                 <label><h4>Email</h4></label>
@@ -41,12 +41,12 @@
 
             <div class="form-input">
                 <label><h4>First name:</h4></label>
-                <input type="text" name="first-name" placeholder="John">
+                <input type="text" name="first_name" placeholder="John">
             </div >
 
             <div class="form-input">
                 <label><h4>Last name:</h4></label>
-                <input type="text" name="last-name" placeholder="Abraham">
+                <input type="text" name="last_name" placeholder="Abraham">
             </div>
 
             <div class="form-input">
