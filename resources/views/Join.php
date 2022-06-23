@@ -18,8 +18,8 @@
     </label>
     <label class="logo">MaWT</label>
     <ul>
-        <li><a href="Home.html">Home</a></li>
-        <li><a href="List.html">List</a></li>
+        <li><a href="Home.php">Home</a></li>
+        <li><a href="List.php">List</a></li>
         <li><a href="#">Map</a></li>
         <li class="login"><a class="active" href="#" >Join</a></li>
     </ul>
@@ -29,7 +29,7 @@
     <div class="container">
 
         <div class="form-title">
-            <h3>Log in</h3>
+            <h3>Register</h3>
         </div>
 
         <form class="form-signup">
@@ -40,15 +40,30 @@
             </div>
 
             <div class="form-input">
+                <label><h4>First name:</h4></label>
+                <input type="text" name="first-name" placeholder="John">
+            </div >
+
+            <div class="form-input">
+                <label><h4>Last name:</h4></label>
+                <input type="text" name="last-name" placeholder="Abraham">
+            </div>
+
+            <div class="form-input">
                 <label><h4>Password:</h4></label>
                 <input type="password" name="password" placeholder="Try smt over 8 caracters...">
             </div>
 
-            <button type="submit"> Log in </button>
+            <div class="form-input">
+                <label><h4>Confirm password:</h4></label>
+                <input type="password" name="password" placeholder="Same password..." >
+            </div>
+
+            <button type="submit"> Register </button>
 
             <div class="signin">
-                <h4>Don't have an account? Click here:</h4>
-                <a href="Join.html" target="_self" id="login">Register</a>
+                <h4>If you have already an account, click here:</h4>
+                <a href="Login.php" target="_self" id="login">Log in</a>
             </div>
 
         </form>
@@ -57,7 +72,7 @@
 <div class="footer">
     <p>
         Managing water turbines on web <br>
-        <a href="Documentatie.html"> Architecture </a>
+        <a href="Documentatie.php"> Architecture </a>
     </p>
 </div>
 </body>

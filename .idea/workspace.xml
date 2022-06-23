@@ -1,7 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1b886df-6f66-4f2e-9e08-8a0906dfef1e" name="Default Changelist" comment="" />
+    <list default="true" id="a1b886df-6f66-4f2e-9e08-8a0906dfef1e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/migrations/users.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/Footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/Home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/Join.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/List.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/Navbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Documentatie.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Join.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/List.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Capture.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ChangePage.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/List.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Login.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Register.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/SearchHome.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Upgrading+Pumped+Storage+Hydropower_+O&amp;M+Modernization+and+Optimization.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/thumbnail.jpg" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +58,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="27umKlT7FhCNZQjepY0xKzsgRA6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -34,6 +79,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\MaWT" />
       <recent name="C:\Users\Lucian\Desktop\WEB\html" />
       <recent name="C:\Users\Lucian\Desktop\WEB\public" />
       <recent name="C:\Users\Lucian\Desktop\WEB\css" />
@@ -47,22 +93,53 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650178284202</updated>
-      <workItem from="1650178285301" duration="33507000" />
+      <workItem from="1650178285301" duration="33985000" />
+      <workItem from="1654256052052" duration="2126000" />
+      <workItem from="1655995848907" duration="43000" />
+      <workItem from="1655996385467" duration="1082000" />
+      <workItem from="1656000026634" duration="1529000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="390" y="7" key="#PHP" timestamp="1656000564008">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="7" key="#PHP/0.0.1366.728@0.0.1366.728" timestamp="1656000564008" />
+    <state x="59" y="205" key="#SQL_Dialects" timestamp="1656001687152">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="59" y="205" key="#SQL_Dialects/0.0.1366.728@0.0.1366.728" timestamp="1656001687152" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1654256108932">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1654256108932" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1655995890492">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1655995890492" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1650185793749">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1650185793749" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1650216423918">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1654256085442">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1650216423918" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1654256085442" />
     <state x="339" y="17" width="672" height="676" key="search.everywhere.popup" timestamp="1650215308821">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

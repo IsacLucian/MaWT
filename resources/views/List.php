@@ -18,10 +18,10 @@
         </label>
         <label class="logo">MaWT</label>
         <ul>
-            <li><a href="Home.html">Home</a></li>
+            <li><a href="Home.php">Home</a></li>
             <li><a class="active" href="#">List</a></li>
             <li><a href="#">Map</a></li>
-            <li class="login"><a href="Join.html" >Join</a></li>
+            <li class="login"><a href="Join.php" >Join</a></li>
         </ul>
     </nav>
 
@@ -66,7 +66,7 @@
     <div class="footer">
         <p>
             Managing water turbines on web <br>
-            <a href="Documentatie.html"> Architecture </a>
+            <a href="Documentatie.php"> Architecture </a>
         </p>
     </div>
 </body>
