@@ -17,12 +17,17 @@
         <label class="logo">MaWT</label>
         <ul>
             <li><a class="active" href="">Home</a></li>
-            <li><a href="List.php">List</a></li>
+            <li><a href="/list">List</a></li>
             <li><a href="#">Map</a></li>
             <li class="login"><a href="<?php echo URL . '/register' ?>">Join</a></li>
+            <li>
+                <a href="">
+                    <?php echo isset($_SESSION['email']) ? $_SESSION['first_name'] . ' ' . $_SESSION['last_name'] : ''; ?>
+                </a>
+            </li>
         </ul>
     </nav>
-
+<!--    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=11.447753906250002%2C40.36328834091583%2C28.278808593750004%2C49.224772722794825&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=6/44.965/19.863">View Larger Map</a></small>-->
     <img src="public/images/Upgrading+Pumped+Storage+Hydropower_+O&M+Modernization+and+Optimization.jpg" class="main">
 
     <div class="text">
@@ -80,3 +85,19 @@
     </div>
 </body>
 </html>
+
+<!--<!DOCTYPE HTML>-->
+<!---->
+<!--<html>-->
+<!---->
+<!--<head>-->
+<!--    <title>CLICK HANDLER</title>-->
+<!---->
+<!--</head>-->
+<!---->
+<!--<body onload='init();'>-->
+<!--<div id="Map" style="height: 500px" ></div>-->
+<!---->
+<!--</body>-->
+<!---->
+<!--</html>-->

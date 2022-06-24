@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <title>MaWT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/Navbar.css">
-    <link rel="stylesheet" href="../css/Footer.css">
-    <link rel="stylesheet" href="../css/List.css">
+    <link rel="stylesheet" href="resources/css/Navbar.css">
+    <link rel="stylesheet" href="resources/css/Footer.css">
+    <link rel="stylesheet" href="resources/css/List.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
@@ -18,10 +18,15 @@
         </label>
         <label class="logo">MaWT</label>
         <ul>
-            <li><a href="Home.php">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a class="active" href="#">List</a></li>
             <li><a href="#">Map</a></li>
-            <li class="login"><a href="Join.php" >Join</a></li>
+            <li class="login"><a href="/register" >Join</a></li>
+            <li>
+                <a href="">
+                    <?php echo isset($_SESSION['email']) ? $_SESSION['first_name'] . ' ' . $_SESSION['last_name'] : ''; ?>
+                </a>
+            </li>
         </ul>
     </nav>
 
@@ -31,7 +36,7 @@
                 <h3> #1 </h3>
                 Hidrocentrala#1
                 <div class="working"> Working </div>
-                <button type="submit"> View </button>
+                <button type="submit" onclick="window.location.href = '/map/25/46'"> View </button>
             </div>
         </div>
 

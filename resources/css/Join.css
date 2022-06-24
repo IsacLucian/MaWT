@@ -15,7 +15,7 @@
     max-width: 100%;
     box-shadow: 0 2px 5px #333;
     margin-top: 2rem;
-    height: 45rem;
+    height: 60rem;
 }
 
 .form-signup{
@@ -107,7 +107,7 @@ button:hover {
 
     .container{
         width: 28rem;
-        height: 46rem;
+        height: 60rem;
     }
 
     .form-signup button {

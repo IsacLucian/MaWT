@@ -42,7 +42,7 @@ class Router {
 
         $controllerInstance = new $controllerName;
 
-        call_user_func([$controllerInstance, $controllerMethod]);
+        call_user_func([$controllerInstance, $controllerMethod], $parameters);
     }
 
     private function routeParameters($route)
