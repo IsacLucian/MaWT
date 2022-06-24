@@ -20,10 +20,9 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a class="active" href="#">List</a></li>
-            <li><a href="#">Map</a></li>
             <li class="login"><a href="/register" >Join</a></li>
             <li>
-                <a href="">
+                <a href="/profile">
                     <?php echo isset($_SESSION['email']) ? $_SESSION['first_name'] . ' ' . $_SESSION['last_name'] : ''; ?>
                 </a>
             </li>

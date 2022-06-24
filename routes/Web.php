@@ -21,6 +21,12 @@ switch ($path[1]) {
         $_SESSION['log'] = $path[3];
         require 'resources/views/Map.php';
         break;
+    case 'profile':
+        require 'resources/views/OwnList.php';
+        break;
+    case 'createTurbine':
+        require  'resources/views/CreateTurbine.php';
+        break;
     default:
         http_response_code(404);
         break;

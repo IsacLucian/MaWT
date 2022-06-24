@@ -49,10 +49,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 
     if($err == 0) {
         $_SESSION['email'] = $_POST['email'];
+        $_SESSION['id'] = $ans['id'];
         $_SESSION['first_name'] = $ans['first_name'];
         $_SESSION['last_name'] = $ans['last_name'];
         $_SESSION['admin'] = $ans['admin'];
     }
+    unset($_SERVER['REQUEST_URI']);
 
 }
 
@@ -79,10 +81,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
     <ul>
         <li><a href="<?php echo URL ?>">Home</a></li>
         <li><a href="/list">List</a></li>
-        <li><a href="#">Map</a></li>
         <li class="login"><a class="active" href="" >Join</a></li>
         <li>
-            <a href="">
+            <a href="/profile">
                 <?php echo isset($_SESSION['email']) ? $_SESSION['first_name'] . ' ' . $_SESSION['last_name'] : ''; ?>
             </a>
         </li>

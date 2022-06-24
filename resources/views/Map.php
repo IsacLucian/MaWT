@@ -17,9 +17,8 @@
         </label>
         <label class="logo">MaWT</label>
         <ul>
-            <li><a href="">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/list" class="active">List</a></li>
-            <li><a href="#">Map</a></li>
             <li class="login"><a href="<?php echo URL . '/register' ?>">Join</a></li>
             <li>
                 <a href="">
