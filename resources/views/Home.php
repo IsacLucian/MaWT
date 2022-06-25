@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="resources/css/Home.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" type="text/css"/>
 </head>
-<body>
+<body onload="init()">
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -60,8 +60,8 @@
                 <div class="form-title">
                     <h3>Map</h3>
                 </div>
-                <label><b>Select a hydroelectric power station on the map</b></label>
-                <img src="public/images/thumbnail.jpg" class="map">
+                <label><b>See all hydroelectric power stations on the map</b></label>
+                <div id="Map" style="height: 400px; width: 500px" ></div>
             </div>
         </div>
 
@@ -85,20 +85,55 @@
         </p>
     </div>
 </body>
-</html>
+<script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+<script>
+    var map,vectorLayer,selectMarkerControl,selectedFeature;
+    var lat =    45;
+    var lon =    25;
+    var zoom =   4;
+    var curpos = new Array();
+    var position;
 
-<!--<!DOCTYPE HTML>-->
-<!---->
-<!--<html>-->
-<!---->
-<!--<head>-->
-<!--    <title>CLICK HANDLER</title>-->
-<!---->
-<!--</head>-->
-<!---->
-<!--<body onload='init();'>-->
-<!--<div id="Map" style="height: 500px" ></div>-->
-<!---->
-<!--</body>-->
-<!---->
-<!--</html>-->
+    var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+    var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+
+    var cntrposition;
+    var markers     = new OpenLayers.Layer.Markers( "Markers" );
+    var mapnik      = new OpenLayers.Layer.OSM("MAP");
+
+    function init() {
+        map = new OpenLayers.Map("Map",{
+                controls:
+                    [
+                        new OpenLayers.Control.PanZoomBar(),
+                        new OpenLayers.Control.LayerSwitcher({}),
+                        new OpenLayers.Control.Permalink(),
+                        new OpenLayers.Control.MousePosition({}),
+                        new OpenLayers.Control.ScaleLine(),
+                        new OpenLayers.Control.OverviewMap(),
+                    ]
+            }
+        );
+
+        cntrposition = new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:900913"));
+        map.addLayers([markers, mapnik]);
+        map.addLayer(mapnik);
+        map.setCenter(cntrposition, zoom);
+        fetch('/turbines', {
+            method: 'GET',
+            headers: {
+                "Content-type": "application/json",
+                Accept: "application/json"
+            },
+        }).then(res => res.json())
+            .then(data => {
+                for(const i in data) {
+                    lon = data[i]['lon'];
+                    lat = data[i]['lat'];
+                    cntrposition = new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:900913"));
+                    markers.addMarker(new OpenLayers.Marker(cntrposition));
+                }
+            });
+    }
+</script>
+</html>
