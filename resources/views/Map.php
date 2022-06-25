@@ -1,4 +1,7 @@
 <?php
+    $link = $_SERVER["REQUEST_URI"];
+    $link = explode('/', $link);
+    $_SESSION['turbine_id'] = $link[2];
     $curl = curl_init(URL . '/turbines/' . $_SESSION['turbine_id']);
     curl_setopt($curl, CURLOPT_URL, URL . '/turbines/' . $_SESSION['turbine_id']);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -13,11 +16,14 @@
     $output = curl_exec($curl);
     curl_close($curl);
 
-    $ans = json_decode($output, true)[0];
-    $_SESSION['lon'] = $ans['lon'];
-    $_SESSION['lat'] = $ans['lat'];
-    $_SESSION['status'] = $ans['status'];
-    $_SESSION['user_id'] = $ans['user_id'];
+    if($output != '[]') {
+        $ans = json_decode($output, true)[0];
+
+        $_SESSION['lon'] = $ans['lon'];
+        $_SESSION['lat'] = $ans['lat'];
+        $_SESSION['status'] = $ans['status'];
+        $_SESSION['user_id'] = $ans['user_id'];
+    }
 ?>
 
 <html lang="en">
@@ -41,12 +47,10 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/list">List</a></li>
-            <?php echo isset($_SESSION['id']) ? '' : '<li class="login"><a href="/register" >Join</a></li>'?>
-            <li>
-                <a href="/profile">
-                    <?php echo isset($_SESSION['email']) ? $_SESSION['first_name'] . ' ' . $_SESSION['last_name'] : ''; ?>
-                </a>
-            </li>
+            <?php echo (isset($_SESSION['id']) ? '' : '<li class="login"><a href="/register" >Join</a></li>')?>
+            <?php echo isset($_SESSION['email']) ? '<li><a href="/profile">'. $_SESSION['first_name'] . ' ' . $_SESSION['last_name'] . '</a></li>' : ''; ?>
+            <?php echo (!isset($_SESSION['email']) ? '' : '<li><a href="/logout" >Logout</a></li>')?>
+
         </ul>
     </nav>
 
@@ -57,7 +61,7 @@
         <h1 id="temp"></h1>
         <div id="location"></div>
 
-        <button id="switch" type="submit" id="<?= $_SESSION['status'] ?>" onclick="updateTurbine(this)"><?php echo ($_SESSION['status'] == 'working' ? 'DISABLE' : 'ENABLE')?></button>
+        <button name="switch" type="submit" id="<?= $_SESSION['status'] ?>" onclick="updateTurbine(this)"><?php echo ($_SESSION['status'] == 'working' ? 'DISABLE' : 'ENABLE')?></button>
     </div>
 
 </body>
@@ -79,9 +83,14 @@
     var mapnik      = new OpenLayers.Layer.OSM("MAP");
 
     function init() {
-        if(<?=$_SESSION['user_id']?> !== <?= $_SESSION['id'] ?>) {
-            document.getElementById('switch').innerHTML = "";
+        let id =      <?= isset($_SESSION['id']) ? $_SESSION['id'] : -1 ?>;
+        let user_id = <?= $_SESSION['user_id'] ?>;
+        var st = <?= $_SESSION['status'] ?>;
+        if(id !== user_id) {
+            console.log(st);
+            st.parentNode.removeChild(st);
         }
+
 
         map = new OpenLayers.Map("Map",{
                 controls:
@@ -119,7 +128,6 @@
             const old_val = (button.id !== 'working' ? 'stopped' : 'working');
             const val = (button.id === 'working' ? 'stopped' : 'working');
             const data = '{"status": ' + '"' + val + '"' + '}';
-
             fetch('/turbines/update/' + id, {
                 method: "POST",
                 headers: {

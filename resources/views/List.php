@@ -20,12 +20,10 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a class="active" href="#">List</a></li>
-            <?php echo isset($_SESSION['id']) ? '' : '<li class="login"><a href="/register" >Join</a></li>'?>
-            <li>
-                <a href="/profile">
-                    <?php echo isset($_SESSION['email']) ? $_SESSION['first_name'] . ' ' . $_SESSION['last_name'] : ''; ?>
-                </a>
-            </li>
+            <?php echo (isset($_SESSION['id']) ? '' : '<li class="login"><a href="/register" >Join</a></li>')?>
+            <?php echo isset($_SESSION['email']) ? '<li><a href="/profile">'. $_SESSION['first_name'] . ' ' . $_SESSION['last_name'] . '</a></li>' : ''; ?>
+            <?php echo (!isset($_SESSION['email']) ? '' : '<li><a href="/logout" >Logout</a></li>')?>
+
         </ul>
     </nav>
 

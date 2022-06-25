@@ -26,6 +26,9 @@ switch ($path[1]) {
     case 'createTurbine':
         require  'resources/views/CreateTurbine.php';
         break;
+    case 'logout':
+        require  'resources/views/Logout.php';
+        break;
     default:
         http_response_code(404);
         break;

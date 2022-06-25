@@ -100,11 +100,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         <li><a href="<?php echo URL?>">Home</a></li>
         <li><a href="/list">List</a></li>
         <li class="login"><a class="active" href="">Join</a></li>
-        <li>
-            <a href="/profile">
-                <?php echo isset($_SESSION['email']) ? $_SESSION['first_name'] . ' ' . $_SESSION['last_name'] : ''; ?>
-            </a>
-        </li>
+        <?php echo isset($_SESSION['email']) ? '<li><a href="/profile">'. $_SESSION['first_name'] . ' ' . $_SESSION['last_name'] . '</a></li>' : ''; ?>
+
     </ul>
 </nav>
 

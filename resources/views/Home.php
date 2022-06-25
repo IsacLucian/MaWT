@@ -1,3 +1,5 @@
+
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -18,12 +20,10 @@
         <ul>
             <li><a class="active" href="">Home</a></li>
             <li><a href="/list">List</a></li>
-            <?php echo isset($_SESSION['id']) ? '' : '<li class="login"><a href="/register" >Join</a></li>'?>
-            <li>
-                <a href="/profile">
-                    <?php echo isset($_SESSION['email']) ? $_SESSION['first_name'] . ' ' . $_SESSION['last_name'] : ''; ?>
-                </a>
-            </li>
+            <?php echo (isset($_SESSION['id']) ? '' : '<li class="login"><a href="/register" >Join</a></li>')?>
+            <?php echo isset($_SESSION['email']) ? '<li><a href="/profile">'. $_SESSION['first_name'] . ' ' . $_SESSION['last_name'] . '</a></li>' : ''; ?>
+            <?php echo (!isset($_SESSION['email']) ? '' : '<li><a href="/logout" >Logout</a></li>')?>
+
         </ul>
     </nav>
 <!--    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=11.447753906250002%2C40.36328834091583%2C28.278808593750004%2C49.224772722794825&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=6/44.965/19.863">View Larger Map</a></small>-->
@@ -46,9 +46,11 @@
 
                 <label><b>Go to a certain hydroelectric power station by searching the id</b></label>
 
-                <input type="text" name="searchId">
+                <form method="get">
+                    <input type="text" name="searchId" id="searchId">
+                </form>
 
-                <button type="submit"> Search </button>
+                <button type="submit" onclick="window.location.href = '/map/' + document.getElementById('searchId').value"> Search </button>
 
             </div>
         </div>

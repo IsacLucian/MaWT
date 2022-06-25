@@ -20,15 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1b886df-6f66-4f2e-9e08-8a0906dfef1e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/AllTurbines.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/TurbinesList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/Config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/static/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/static/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/List.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/List.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Join.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Login.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/CreateTurbine.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/CreateTurbine.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Join.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Join.php" afterDir="false" />
@@ -36,7 +29,6 @@
       <change beforePath="$PROJECT_DIR$/resources/views/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Map.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Map.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/OwnList.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/OwnList.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/Api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/Api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/Web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/Web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +94,7 @@
       <workItem from="1655995848907" duration="43000" />
       <workItem from="1655996385467" duration="1082000" />
       <workItem from="1656000026634" duration="22128000" />
-      <workItem from="1656051931172" duration="41851000" />
+      <workItem from="1656051931172" duration="47218000" />
     </task>
     <servers />
   </component>
@@ -150,10 +142,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="507" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1656015864083" />
-    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1656095190933">
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1656140641398">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1656095190933" />
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1656140641398" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1650185793749">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
