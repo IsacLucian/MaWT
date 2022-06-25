@@ -1,3 +1,25 @@
+<?php
+    $curl = curl_init(URL . '/turbines/' . $_SESSION['turbine_id']);
+    curl_setopt($curl, CURLOPT_URL, URL . '/turbines/' . $_SESSION['turbine_id']);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "GET");
+
+    $headers = array(
+        "Accept: application/json",
+    );
+
+    curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+
+    $output = curl_exec($curl);
+    curl_close($curl);
+
+    $ans = json_decode($output, true)[0];
+    $_SESSION['lon'] = $ans['lon'];
+    $_SESSION['lat'] = $ans['lat'];
+    $_SESSION['status'] = $ans['status'];
+    $_SESSION['user_id'] = $ans['user_id'];
+?>
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -18,10 +40,10 @@
         <label class="logo">MaWT</label>
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/list" class="active">List</a></li>
-            <li class="login"><a href="<?php echo URL . '/register' ?>">Join</a></li>
+            <li><a href="/list">List</a></li>
+            <?php echo isset($_SESSION['id']) ? '' : '<li class="login"><a href="/register" >Join</a></li>'?>
             <li>
-                <a href="">
+                <a href="/profile">
                     <?php echo isset($_SESSION['email']) ? $_SESSION['first_name'] . ' ' . $_SESSION['last_name'] : ''; ?>
                 </a>
             </li>
@@ -29,13 +51,22 @@
     </nav>
 
     <div class="card" id="Map" style="height: 500px; width: 100%" ></div>
+
+    <div id="weather" class="wrap">
+        <div id="description"></div>
+        <h1 id="temp"></h1>
+        <div id="location"></div>
+
+        <button id="switch" type="submit" id="<?= $_SESSION['status'] ?>" onclick="updateTurbine(this)"><?php echo ($_SESSION['status'] == 'working' ? 'DISABLE' : 'ENABLE')?></button>
+    </div>
+
 </body>
 
 <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
 <script>
     var map,vectorLayer,selectMarkerControl,selectedFeature;
-    var lat =   <?= $_SESSION['lat'] ?>;
-    var lon =    <?= $_SESSION['log'] ?>;
+    var lat =    <?= $_SESSION['lat'] ?>;
+    var lon =    <?= $_SESSION['lon'] ?>;
     var zoom =   4;
     var curpos = new Array();
     var position;
@@ -47,8 +78,11 @@
     var markers     = new OpenLayers.Layer.Markers( "Markers" );
     var mapnik      = new OpenLayers.Layer.OSM("MAP");
 
-    function init()
-    {
+    function init() {
+        if(<?=$_SESSION['user_id']?> !== <?= $_SESSION['id'] ?>) {
+            document.getElementById('switch').innerHTML = "";
+        }
+
         map = new OpenLayers.Map("Map",{
                 controls:
                     [
@@ -63,58 +97,42 @@
         );
 
         cntrposition = new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:900913"));
-        console.log(cntrposition);
         map.addLayers([markers, mapnik]);
         map.addLayer(mapnik);
         map.setCenter(cntrposition, zoom);
 
         markers.addMarker(new OpenLayers.Marker(cntrposition));
 
-        // var click = new OpenLayers.Control.Click();
-        // map.addControl(click);
-        //
-        // click.activate();
+        fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=<?= WEATHER_KEY ?>')
+            .then(res => res.json())
+            .then(d => {
+                var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+
+                document.getElementById('description').innerHTML = d.weather[0].description;
+                document.getElementById('temp').innerHTML = celcius + '&deg;';
+                document.getElementById('location').innerHTML = d.name;
+            });
     }
 
-    // OpenLayers.Control.Click = OpenLayers.Class(OpenLayers.Control, {
-    //     defaultHandlerOptions: {
-    //         'single': true,
-    //         'double': false,
-    //         'pixelTolerance': 0,
-    //         'stopSingle': false,
-    //         'stopDouble': false
-    //     },
-    //
-    //     initialize: function(options) {
-    //         this.handlerOptions = OpenLayers.Util.extend(
-    //             {}, this.defaultHandlerOptions
-    //         );
-    //         OpenLayers.Control.prototype.initialize.apply(
-    //             this, arguments
-    //         );
-    //         this.handler = new OpenLayers.Handler.Click(
-    //             this, {
-    //                 'click': this.trigger
-    //             }, this.handlerOptions
-    //         );
-    //     },
-    //
-    //     trigger: function(e) {
-    //         var lonlat = map.getLonLatFromPixel(e.xy);
-    //         lonlat1 = lonlat;//new OpenLayers.LonLat(lonlat.lon,lonlat.lat).transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:900913"));
-    //
-    //         markers.clearMarkers();
-    //         lon = lonlat1.lon;
-    //         lat = lonlat1.lat;
-    //         cntrposition = new OpenLayers.LonLat(lon, lat);//.transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:900913"));
-    //
-    //         markers.addMarker(new OpenLayers.Marker(cntrposition));
-    //         console.log(cntrposition.transform(new OpenLayers.Projection("EPSG:900913"), new OpenLayers.Projection("EPSG:4326")));
-    //
-    //         alert("Hello..."+lonlat1.lon + "  " +lonlat1.lat);
-    //
-    //     }
-    //
-    // });
+        function updateTurbine(button) {
+            const id = <?= $_SESSION['turbine_id'] ?>;
+            const old_val = (button.id !== 'working' ? 'stopped' : 'working');
+            const val = (button.id === 'working' ? 'stopped' : 'working');
+            const data = '{"status": ' + '"' + val + '"' + '}';
+
+            fetch('/turbines/update/' + id, {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({status: val})
+            }).then(res => res.text())
+                .then(d => {
+                    document.getElementById(old_val).textContent = (val === 'working' ? 'DISABLE' : 'ENABLE');
+                    document.getElementById(old_val).id = val;
+                });
+        }
+
 </script>
 </html>

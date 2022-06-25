@@ -14,7 +14,8 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
     transition: 0.3s;
     border-radius: 5px;
-    margin-top: 25px;
+    margin-top: 10px;
+    margin-bottom: 50px;
     background: white;
     color: black;
     text-align: center;
@@ -29,11 +30,11 @@ body {
     padding: 2px 16px;
 }
 
-
 .container > h3, div {
-    display: inline-block;
+    display: block;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
 }
 
 .working {
@@ -49,7 +50,7 @@ button {
     border: 2px solid #847e7e;
     color: white;
     padding: 10px 20px;
-    margin: 8px 0;
+    margin: 8px 8px;
     cursor: pointer;
     width: 50%;
     border-radius: 3px;

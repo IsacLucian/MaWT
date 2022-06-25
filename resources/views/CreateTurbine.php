@@ -29,10 +29,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         $aux['lon'] = $_POST['Lon'];
         $aux['lat'] = $_POST['Lat'];
         $aux['user_id'] = $_SESSION['id'];
-        $aux['status'] = 'Working';
+        $aux['status'] = 'working';
         curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($aux));
         $output = curl_exec($curl);
         curl_close($curl);
+
+        header("Location: /profile");
     }
     unset($_SERVER['REQUEST_URI']);
 }
@@ -60,7 +62,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
     <ul>
         <li><a href="<?php echo URL ?>">Home</a></li>
         <li><a href="/list">List</a></li>
-        <li class="login"><a href="/register" >Join</a></li>
+        <?php echo isset($_SESSION['id']) ? '' : '<li class="login"><a href="/register" >Join</a></li>'?>
         <li>
             <a href="/profile" class="active">
                 <?php echo isset($_SESSION['email']) ? $_SESSION['first_name'] . ' ' . $_SESSION['last_name'] : ''; ?>

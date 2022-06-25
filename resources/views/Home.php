@@ -18,7 +18,7 @@
         <ul>
             <li><a class="active" href="">Home</a></li>
             <li><a href="/list">List</a></li>
-            <li class="login"><a href="<?php echo URL . '/register' ?>">Join</a></li>
+            <?php echo isset($_SESSION['id']) ? '' : '<li class="login"><a href="/register" >Join</a></li>'?>
             <li>
                 <a href="/profile">
                     <?php echo isset($_SESSION['email']) ? $_SESSION['first_name'] . ' ' . $_SESSION['last_name'] : ''; ?>

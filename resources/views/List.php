@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="resources/css/List.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
-<body>
+<body onload="getTurbines()">
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -20,7 +20,7 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a class="active" href="#">List</a></li>
-            <li class="login"><a href="/register" >Join</a></li>
+            <?php echo isset($_SESSION['id']) ? '' : '<li class="login"><a href="/register" >Join</a></li>'?>
             <li>
                 <a href="/profile">
                     <?php echo isset($_SESSION['email']) ? $_SESSION['first_name'] . ' ' . $_SESSION['last_name'] : ''; ?>
@@ -29,44 +29,9 @@
         </ul>
     </nav>
 
-    <div class="wrap">
-        <div class="card">
-            <div class="container">
-                <h3> #1 </h3>
-                Hidrocentrala#1
-                <div class="working"> Working </div>
-                <button type="submit" onclick="window.location.href = '/map/25/46'"> View </button>
-            </div>
-        </div>
+    <div class="wrap" id="list">
 
-        <div class="card">
-            <div class="container">
-                <h3> #2 </h3>
-                Hidrocentrala#2
-                <div class="working"> Working </div>
-                <button type="submit"> View </button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="container">
-                <h3> #3 </h3>
-                Hidrocentrala#3
-                <div class="stopped"> Stopped </div>
-                <button type="submit"> View </button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="container">
-                <h3> #4 </h3>
-                Hidrocentrala#4
-                <div class="stopped"> Stopped </div>
-                <button type="submit"> View </button>
-            </div>
-        </div>
     </div>
-
     <div class="footer">
         <p>
             Managing water turbines on web <br>
@@ -74,4 +39,5 @@
         </p>
     </div>
 </body>
+<script src="resources/js/AllTurbines.js"></script>
 </html>

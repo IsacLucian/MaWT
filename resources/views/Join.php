@@ -170,5 +170,4 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 </div>
 </body>
 
-<script src="resources/js/Join.js"> </script>
 </html>

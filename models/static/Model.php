@@ -83,6 +83,7 @@ class Model
             return false;
         }
 
+
         $id = isset($args['id']) ? $args['id'] : $args[0];
 
         $conn = (new Database)->getConnection();
@@ -100,7 +101,6 @@ class Model
         $s = substr($s, 0,-2);
 
         $query = 'UPDATE ' . static::$table . ' SET ' . $s . 'WHERE id = ' . $id;
-
         $stmt = $conn->query($query);
 
         return $stmt;

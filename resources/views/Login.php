@@ -26,8 +26,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         $err++;
     }
 
-    $curl = curl_init(URL . '/users/' . $_POST['email']);
-    curl_setopt($curl, CURLOPT_URL, URL . '/users/' . $_POST['email']);
+    $curl = curl_init(URL . '/users/email/' . $_POST['email']);
+    curl_setopt($curl, CURLOPT_URL, URL . '/users/email/' . $_POST['email']);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "GET");
 
@@ -130,6 +130,5 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
     </p>
 </div>
 </body>
-<script src="resources/js/Login.js"></script>
 
 </html>

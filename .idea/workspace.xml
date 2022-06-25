@@ -20,17 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1b886df-6f66-4f2e-9e08-8a0906dfef1e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/TurbinesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Turbines.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/CreateTurbine.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/OwnList.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/AllTurbines.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/TurbinesList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/turbines.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/turbines.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/static/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/static/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/List.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/List.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Join.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/CreateTurbine.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/CreateTurbine.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Join.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Join.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/List.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/List.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Map.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Map.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/OwnList.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/OwnList.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/Api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/Api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/Web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/Web.php" afterDir="false" />
     </list>
@@ -53,6 +58,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="27umKlT7FhCNZQjepY0xKzsgRA6" />
   <component name="ProjectLevelVcsManager">
@@ -91,7 +102,7 @@
       <workItem from="1655995848907" duration="43000" />
       <workItem from="1655996385467" duration="1082000" />
       <workItem from="1656000026634" duration="22128000" />
-      <workItem from="1656051931172" duration="22259000" />
+      <workItem from="1656051931172" duration="41851000" />
     </task>
     <servers />
   </component>
@@ -123,6 +134,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1656015017690" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1656101652879">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1656101652879" />
     <state x="462" y="239" key="#com.jetbrains.php.refactoring.move.member.PhpMoveMemberDialog#" timestamp="1656024873552">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -143,13 +158,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1650185793749" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1656070875127">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1656133561069">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1656070875127" />
-    <state x="339" y="17" width="672" height="676" key="search.everywhere.popup" timestamp="1656097154507">
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1656133561069" />
+    <state x="339" y="17" width="672" height="676" key="search.everywhere.popup" timestamp="1656133143864">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="17" width="672" height="676" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1656097154507" />
+    <state x="339" y="17" width="672" height="676" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1656133143864" />
   </component>
 </project>

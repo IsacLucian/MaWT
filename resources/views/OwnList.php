@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="resources/css/List.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
-<body>
+<body onload="getTurbines(<?= $_SESSION['id'] ?>)">
 <nav>
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
@@ -20,7 +20,7 @@
     <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/list">List</a></li>
-        <li class="login"><a href="/register" >Join</a></li>
+        <?php echo isset($_SESSION['id']) ? '' : '<li class="login"><a href="/register" >Join</a></li>'?>
         <li>
             <a href="" class="active">
                 <?php echo isset($_SESSION['email']) ? $_SESSION['first_name'] . ' ' . $_SESSION['last_name'] : ''; ?>
@@ -29,19 +29,9 @@
     </ul>
 </nav>
 
-<div class="wrap">
+<div class="wrap" id="list">
 
     <button onclick="window.location.href = '/createTurbine'">CREATE NEW TURBINE</button>
-
-    <div class="card">
-        <div class="container">
-            <h3> #1 </h3>
-            Hidrocentrala#1
-            <div class="working"> Working </div>
-            <button type="submit" onclick="window.location.href = '/map/25/46'"> View </button>
-        </div>
-    </div>
-
 
 </div>
 
@@ -52,4 +42,6 @@
     </p>
 </div>
 </body>
+
+<script src="resources/js/TurbinesList.js"></script>
 </html>

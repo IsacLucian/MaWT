@@ -17,8 +17,7 @@ switch ($path[1]) {
         require 'resources/views/List.php';
         break;
     case 'map' :
-        $_SESSION['lat'] = $path[2];
-        $_SESSION['log'] = $path[3];
+        $_SESSION['turbine_id'] = $path[2];
         require 'resources/views/Map.php';
         break;
     case 'profile':
